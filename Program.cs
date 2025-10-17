@@ -70,8 +70,6 @@ internal class Program
         Console.WriteLine();
         PrintMatrix(MatrixMultiply(ar2, br2));
 
-
-        
         
         Console.WriteLine($"Tổng: {Sum(ar2)}");
 
