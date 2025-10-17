@@ -48,7 +48,7 @@ internal class Program
     {
         for (int i = ar.GetLowerBound(0); i <= ar.GetUpperBound(0); i++) {
             for (int j = ar.GetLowerBound(1); j <= ar.GetUpperBound(1); j++)
-                Console.Write($"{ar.GetValue(i, j)} ");
+                Console.Write("{0, 3}", ar.GetValue(i, j));
             Console.WriteLine();
         }
     }
