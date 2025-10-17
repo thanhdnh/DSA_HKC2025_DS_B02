@@ -22,6 +22,17 @@ internal class Program
             sum = sum + y;
         return sum;
     }
+    static Array MatrixMultiply(Array a, Array b)
+    {
+        Array result = Array.CreateInstance(
+            a.GetType(),
+            new int[2] { a.GetLength(0), b.GetLength(1) },
+            new int[2] { a.GetLowerBound(0), a.GetUpperBound(0) }
+        );
+        //Tính tích ma trận
+
+        return result;
+    }
     static void PrintMatrix(Array ar)
     {
         for (int i = ar.GetLowerBound(0); i <= ar.GetUpperBound(0); i++) {
@@ -43,7 +54,7 @@ internal class Program
         Array ar2 = GenerateMatrix(3, 2);
         Array br2 = GenerateMatrix(2, 3);
         PrintMatrix(ar2);
-        
+
 
         
         
