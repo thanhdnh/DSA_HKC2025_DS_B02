@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Globalization;
+
+internal class Program
 {
     static Array GenerateMatrix(int m, int n, int l1 = 0, int l2 = 0)
     {
@@ -20,6 +22,14 @@
             sum = sum + y;
         return sum;
     }
+    static void PrintMatrix(Array ar)
+    {
+        for (int i = ar.GetLowerBound(0); i <= ar.GetUpperBound(0); i++) {
+            for (int j = ar.GetLowerBound(1); j <= ar.GetUpperBound(1); j++)
+                Console.Write($"{ar.GetValue(i, j)} ");
+            Console.WriteLine();
+        }
+    }
     private static void Main(string[] args)
     {
         /*
@@ -32,6 +42,8 @@
         //ar1[1], ar1[2],...,ar1[5]
         Array ar2 = GenerateMatrix(3, 2);
         Array br2 = GenerateMatrix(2, 3);
+        PrintMatrix(ar2);
+        
 
         
         

@@ -12,3 +12,4 @@
 /Users/hoangthanh/DSA_2025_HKC/DS/B02/obj/Debug/net9.0/B02.pdb
 /Users/hoangthanh/DSA_2025_HKC/DS/B02/obj/Debug/net9.0/B02.genruntimeconfig.cache
 /Users/hoangthanh/DSA_2025_HKC/DS/B02/obj/Debug/net9.0/ref/B02.dll
+/Users/hoangthanh/DSA_2025_HKC/DS/B02/obj/Debug/net9.0/B02.sourcelink.json
