@@ -25,9 +25,9 @@ internal class Program
     static Array MatrixMultiply(Array a, Array b)
     {
         Array result = Array.CreateInstance(
-            a.GetType(),
+            typeof(float),
             new int[2] { a.GetLength(0), b.GetLength(1) },
-            new int[2] { a.GetLowerBound(0), a.GetUpperBound(0) }
+            new int[2] { a.GetLowerBound(0), a.GetLowerBound(1) }
         );
         //Tính tích ma trận
         for(int i=result.GetLowerBound(0);
@@ -36,9 +36,10 @@ internal class Program
                 j <= result.GetUpperBound(1); j++)
             {
                 float sum = 0;
-                for (int k = a.GetLowerBound(1); 
+                for (int k = a.GetLowerBound(1);
                     k <= a.GetUpperBound(1); k++)
-                    sum = sum + (float)a.GetValue(i, k)*(float)b.GetValue(k, j);
+                    sum = sum + (float)a.GetValue(i, k) * (float)b.GetValue(k, j);
+                //Console.WriteLine($"{i}x{j}");
                 result.SetValue(sum, i, j);
             }
         return result;
