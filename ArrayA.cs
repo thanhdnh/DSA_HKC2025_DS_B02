@@ -7,12 +7,13 @@ public class ArrayA
         elmements = new object[length];
     }
 
-    public object[] Items {
-            get => elmements;
-            set => elmements = value; 
+    public object[] Items
+    {
+        get => elmements;
+        set => elmements = value;
     }
 
-  public void Add(object x)
+    public void Add(object x)
     {
 
     }
@@ -28,6 +29,6 @@ public class ArrayA
     }
     public void Reverse()
     {
-        
+
     }
 }
