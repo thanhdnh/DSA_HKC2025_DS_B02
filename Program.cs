@@ -30,7 +30,17 @@ internal class Program
             new int[2] { a.GetLowerBound(0), a.GetUpperBound(0) }
         );
         //Tính tích ma trận
-
+        for(int i=result.GetLowerBound(0);
+                i<=result.GetUpperBound(0);i++)
+            for(int j=result.GetLowerBound(1);
+                j <= result.GetUpperBound(1); j++)
+            {
+                float sum = 0;
+                for (int k = a.GetLowerBound(1); 
+                    k <= a.GetUpperBound(1); k++)
+                    sum = sum + (float)a.GetValue(i, k)*(float)b.GetValue(k, j);
+                result.SetValue(sum, i, j);
+            }
         return result;
     }
     static void PrintMatrix(Array ar)
@@ -54,6 +64,10 @@ internal class Program
         Array ar2 = GenerateMatrix(3, 2);
         Array br2 = GenerateMatrix(2, 3);
         PrintMatrix(ar2);
+        Console.WriteLine();
+        PrintMatrix(br2);
+        Console.WriteLine();
+        PrintMatrix(MatrixMultiply(ar2, br2));
 
 
         
